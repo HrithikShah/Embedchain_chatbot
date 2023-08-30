@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style.css')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='JS/getresponse.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='JS/success.js')}}"></script>
+    <title>EmbedchainBot</title>
+  </head>
+
+
+
+  <body>
+
+    <center>
+      <h1>
+        Embedchain ChatBot
+      </h1>
+    </center>
+
+    <div class="box"></div>
+
+    <div class="boxed">
+      <div>
+
+        <div id="chatbox">
+          
+          <p class="botText">
+            
+            <span>Hi! I'm EmbedchainBot  <br> Upload file for my learning and ask question regarding them. </span>
+          </p>
+        </div>
+
+        <div id="userInput">
+
+           <!-- user enter query into it -->
+          <input id="textInput" type="text" name="msg"  placeholder="Enter your query...."  />  
+          <input id="buttonInput" type="submit"  onclick="getBotResponse()"    value="Enter">
+
+          <!-- here, user can upload mutliple files for learning -->
+          <form action="http://localhost:5000/" method="POST" enctype="multipart/form-data">
+            <input id="pdfInput" type="file" name="file" multiple/>
+            <input id="pdfInput" type="submit"  onclick="successfully_uploaded()"    value="upload">
+
+          </form>
+
+        </div>
+      
+      </div>
+    </div>
+  </body>
+</html>
