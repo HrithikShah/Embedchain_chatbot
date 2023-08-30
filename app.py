@@ -13,7 +13,7 @@ def homepage():
 
 
 #Uploading and training embedchain bot on the files same time and
-# saving it into file folder in static
+# saving it into file folder in static/FILE
 @app.route('/', methods=['POST'] )
 def upload():
     if request.method == 'POST':
