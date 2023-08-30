@@ -3,7 +3,7 @@
 
 ## 🔍 Demo
 
-Try out embedchainbot in your browser:
+Try out Embedchainbot in your browser:
 
 [Embedchainbot](https://hrithikshah.pythonanywhere.com/)
 
