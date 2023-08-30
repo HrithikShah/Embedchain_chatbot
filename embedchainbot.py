@@ -2,6 +2,14 @@ import os
 from embedchain import App
 from dotenv import load_dotenv
 
+# sqlite3 is not supporting the function
+# so we write below lines for using pysqlite3 
+#[ this was required for deployment in pythonanywhere
+
+import pysqlite3
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 # Create a bot instance
 load_dotenv()
 os.environ["OPENAI_API_KEY"]
