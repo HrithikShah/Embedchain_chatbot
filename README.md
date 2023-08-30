@@ -1,1 +1,1 @@
-# embedchain_chatbot
+# Embedchain_chatbot
